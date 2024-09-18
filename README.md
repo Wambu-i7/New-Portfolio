@@ -92,9 +92,8 @@ Enhanced interactivity with animations and advanced JavaScript frameworks.
 Through this project, I not only showcased my current skills but also paved the way for future learning and growth. It’s been a great learning experience, and I look forward to improving it as I continue to evolve as a developer.
 
 RESOURCES
-Books:
- 			- "HTML and CSS: Design and Build Websites" by Jon Duckett
-			- "JavaScript and JQuery: Interactive Front-End Web Development" by Jon Duckett
+ - "HTML and CSS: Design and Build Websites" by Jon Duckett
+- "JavaScript and JQuery: Interactive Front-End Web Development" by Jon Duckett
 
 
 >>>>>>> 4d70cbd (Polished my Readme)
