@@ -34,7 +34,7 @@ body {
     left: 0;
     width: 100%;
     padding: 2rem 9%;
-    background: transparent;
+    background: rgb(214, 21, 205);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,7 +43,7 @@ body {
 }
 
 .header.sticky {
-    background: var(--bg-color);
+    background: rgb(189, 111, 235);
 }
 
 .logo {
@@ -67,7 +67,7 @@ body {
 
 .navbar a:hover,
 .navbar a.active {
-    color: var(--main-color);
+    color: blueviolet;
 }
 
 #menu-icon {
@@ -87,7 +87,6 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url('/images/home.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -216,23 +215,16 @@ section {
 .home-sci {
     position: absolute;
     bottom: 4rem;
+    margin-left: -30px;
     width: 170px;
     display: flex;
-    justify-content: space-between;
-}
-
-.home-sci {
-    position: absolute;
-    bottom: 4rem;
-    width: 170px;
-    display: flex;
-    justify-content: space-between;
+    justify-content:space-evenly;
 }
 
 .home-sci a {
     position: relative;
     display: inline-flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     width: 40px;
     height: 40px;
@@ -245,7 +237,6 @@ section {
     overflow: hidden;
     transition: .5s;
 }
-
 .home-sci a:hover {
     color: var(--bg-color);
 }
