@@ -12,10 +12,10 @@
 }
 
 :root {
-    --bg-color: #081b29;
+    --bg-color: #2D3250;
     --second-bg-color: #112e42;
     --text-color: #ededed;
-    --main-color: #00abf0;
+    --main-color: #bb51f8;
 }
 
 html {
@@ -287,7 +287,7 @@ section {
     align-items: center;
     flex-direction: column;
     gap: 2rem;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     padding-bottom: 6rem;
     
 }
@@ -357,15 +357,13 @@ span {
     display: inline-block;
     width: 15rem;
 }
-.btn-box.btns .email{
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
+.email{
+    font-size: 15px;
     margin-right: 60px;
     
 }
-.btn-box.btns .email:hover{
-    color: white;
+.email:hover{
+    color: #b86be4;
     transition: opacity 0.16s;
 }
 
@@ -377,7 +375,7 @@ span {
 .skills {
     min-height: auto;
     padding-bottom: 7rem;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 
 .skills h2 {
