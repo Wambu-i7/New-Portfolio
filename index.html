@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
 
 </head>
 <body>
@@ -15,7 +17,7 @@
     <button class="nav-toggle" id="navToggle">&#9776;</button>
     <!-- Navbar -->
   <nav class="navbar" id="navMenu">
-    <h1 class="logo">🌸 Rose Ndikiru</h1>
+    <h1 class="logo">🌸Rose Ndikiru</h1>
     <ul>
         <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -35,8 +37,22 @@
     <p data-aos="fade-up" data-aos-delay="200">Frontend Developer | Learner | Creator</p>
     <p data-aos="fade-left" data-aos-delay="200"> A frontend developer who loves blending design and code to create engaging digital experiences. 
         Every project is a chance to learn, grow, and inspire.</p>
-    <a href="#projects" class="btn" data-aos="zoom-in" data-aos-delay="400">View My Work</a>
+    <a href="#projects" class="btn">View My Work</a>
+
+    <div class="social-links">
+      <a href="https://github.com/Wambu-i7" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/wambui-ndikiru-664045279/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://x.com/NdikiruWambui" target="_blank" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div>
   </div>
+  <!-- Social Links -->
+    
   
   <div class="hero-image" data-aos="fade-left">
     <img src="images/my-image.jpg" alt="Rose Ndikiru">
@@ -46,12 +62,39 @@
 
   <!-- About -->
   <section class="about" id="about">
-    <h2>About Me</h2>
-    <p data-aos="fade-left">
-      I’m a frontend developer passionate about creating interactive, responsive, and user-friendly websites.
-      I enjoy learning new technologies and building projects that help people.
-    </p>
-  </section>
+  <h2 data-aos="fade-up">About Me</h2>
+
+  <!-- Row 1 -->
+  <div class="about-row">
+    <div class="about-text" data-aos="fade-right">
+      <h3>Who I Am</h3>
+      <p>
+        I'm Rose Ndikiru, a passionate Frontend Developer from Nairobi, Kenya. 
+        I love transforming ideas into elegant, user-friendly web experiences. 
+        I’m constantly learning and exploring new technologies to grow as a creator and developer.
+      </p>
+    </div>
+    <div class="code-box" data-aos="fade-left">
+      <pre><code id="code1"></code></pre>
+    </div>
+  </div>
+
+  <!-- What I Do -->
+  <div class="about-row reverse">
+    <div class="about-text" data-aos="fade-right">
+      <h3>What I Do</h3>
+      <p>
+        I design and build modern, responsive websites using HTML, CSS, and JavaScript. 
+        I also enjoy experimenting with React and animations like AOS to make the web feel alive.
+        My goal is to create meaningful projects that inspire and connect people.
+      </p>
+    </div>
+    <div class="code-box" data-aos="fade-right">
+      <pre><code id="code2"></code></pre>
+    </div>
+  </div>
+</section>
+
 
   <!-- Projects -->
   <section class="projects" id="projects">
@@ -159,6 +202,40 @@
 
     document.addEventListener('scroll', closeMenu, { passive: true });
 
+    
+    const code1 = [
+    "function introduce() {",
+    "  const name = 'Rose Ndikiru';",
+    "  const role = 'Frontend Developer';",
+    "  console.log(`Hi, I'm ${name}, a ${role}.`);",
+    "}"
+    ];
+
+    const code2 = [
+    "const skills = ['HTML', 'CSS', 'JavaScript', 'Design'];",
+    "skills.forEach(skill => {",
+    "  console.log('Bringing ideas to life using' + skills);",
+    "});"
+    ];
+
+    function typeCode(elementId, codeLines, delay = 60) {
+    const el = document.getElementById(elementId);
+    let fullCode = codeLines.join('\n');
+    let i = 0;
+    function type() {
+        if (i < fullCode.length) {
+        el.textContent += fullCode.charAt(i);
+        i++;
+        setTimeout(type, delay);
+        }
+    }
+    type();
+    }
+
+    window.onload = () => {
+    typeCode("code1", code1);
+    typeCode("code2", code2, 50);
+    };
 </script>
 </body>
 </html>
